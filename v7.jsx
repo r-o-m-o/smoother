@@ -185,10 +185,6 @@ function main(paths) {
     }
   }
 
-  alert(route);
-
-  // return;
-
   // パス連結処理
   for (var i = 0; i < pal; i++) {
     if (!route[i][1]) normalize(paths[route[i][0]]);
