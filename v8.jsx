@@ -1,4 +1,5 @@
-// v6の効率化
+// 孤立点はとりあえず無視
+// 構造の見直し
 
 (function () {
   // 選択アイテム
@@ -204,7 +205,9 @@ function smoothing(points, index) {
   var handle = (4 / 3) * Math.tan(toRad(apex) / 4) * radius;
   // ハンドル操作
   current.leftDirection = getDirection(current, handle, 180 - caa);
+  current.pointType = PointType.SMOOTH;
   previous.rightDirection = getDirection(previous, handle, 180 - paa);
+  previous.pointType = PointType.SMOOTH;
   return;
 }
 
