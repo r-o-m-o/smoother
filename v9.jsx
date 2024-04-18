@@ -234,6 +234,11 @@ function toRad(degree) {
   return degree * (Math.PI / 180);
 }
 
+// 小数点以下第三位で四捨五入
+function toRound(num) {
+  return Math.round(num * 10000) / 10000;
+}
+
 // オープンパス（孤立点除く）を抽出
 function extractPathItems(arr, result) {
   if (result === undefined) result = [];
